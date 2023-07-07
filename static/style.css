@@ -21,3 +21,18 @@
 .current{
     opacity: 1 !important;
 }
+
+.past{
+    opacity: 0.55 !important;
+}
+
+.header{
+    padding-bottom: 20px !important;
+}
+.site-main-menu li a{
+    font-size: 14px !important;
+}
+
+.site-main-menu li{
+    margin-right: 20px !important;
+}

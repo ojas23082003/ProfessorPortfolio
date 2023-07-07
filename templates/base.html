@@ -142,9 +142,9 @@
                     <!-- Navigation -->
                     <div class="site-nav mobile-menu-hide">
                         <ul id="menu-classic-menu" class="leven-classic-menu site-main-menu">
-                            <li id="menu-item-160" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home"><a href="#" aria-current="page" data-hover="1"><i class="fa-solid fa-house icons"></i>Home</a></li>
-                            <li id="menu-item-174" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-174"><a href="#" data-hover="1"><i class="fa-solid fa-user icons"></i>Biography</a></li>
-                            <li id="menu-item-28" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-28"><a href="" data-hover="1"><i class="fa-solid fa-file-signature icons"></i>Publications</a>
+                            <li id="menu-item-160" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home"><a href="{% url 'home' %}" aria-current="page" data-hover="1" class="{% if home %}current{% else %}past{% endif %}"><i class="fa-solid fa-house icons"></i>Home</a></li>
+                            <li id="menu-item-174" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-174"><a href="{% url 'home' %}" data-hover="1" class="{% if biography %}current{% else %}past{% endif %}"><i class="fa-solid fa-user icons"></i>Biography</a></li>
+                            <li id="menu-item-28" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-28"><a href="{% url 'publications' %}" data-hover="1" class="{% if publications %}current{% else %}past{% endif %}"><i class="fa-solid fa-file-signature icons"></i>Publications</a>
                                 <!-- <ul class="sub-menu">
                                     <li id="menu-item-33" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-33"><a href="https://lmpixels.com/wp/leven-wp/full-width/portfolio-2-columns/" data-hover="1">Portfolio 2 Columns</a></li>
                                     <li id="menu-item-29" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-29"><a href="https://lmpixels.com/wp/leven-wp/full-width/portfolio/" data-hover="1">Portfolio 3 Columns</a></li>
@@ -152,19 +152,19 @@
                                     <li id="menu-item-40" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-40"><a href="https://lmpixels.com/wp/leven-wp/full-width/portfolio-5-columns/" data-hover="1">Portfolio 5 Columns</a></li>
                                 </ul> -->
                             </li>
-                            <li id="menu-item-240" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-240"><a href="https://lmpixels.com/wp/leven-wp/full-width/blog-2-columns/" data-hover="1"><i class="fa-solid fa-list-check icons"></i>Projects</a>
+                            <li id="menu-item-240" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-240"><a href="{% url 'home' %}" data-hover="1" class="{% if projects %}current{% else %}past{% endif %}"><i class="fa-solid fa-list-check icons"></i>Projects</a>
                                 <!-- <ul class="sub-menu">
                                     <li id="menu-item-94" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-94"><a href="https://lmpixels.com/wp/leven-wp/full-width/blog-2-columns/" data-hover="1">Blog 2 Columns</a></li>
                                     <li id="menu-item-95" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-95"><a href="https://lmpixels.com/wp/leven-wp/full-width/blog-3-columns/" data-hover="1">Blog 3 Columns</a></li>
                                     <li id="menu-item-22" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-22"><a href="https://lmpixels.com/wp/leven-wp/full-width/blog/" data-hover="1">Blog List</a></li>
                                 </ul> -->
                             </li>
-                            <li id="menu-item-191" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-191"><a href="https://lmpixels.com/wp/leven-wp/full-width/contact/" data-hover="1"><i class="fa-solid fa-handshake icons"></i>Consultancy</a></li>
-                            <li id="menu-item-191" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-191"><a href="https://lmpixels.com/wp/leven-wp/full-width/contact/" data-hover="1"><i class="fa-solid fa-user-graduate icons"></i>Students</a></li>
-                            <li id="menu-item-191" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-191"><a href="https://lmpixels.com/wp/leven-wp/full-width/contact/" data-hover="1"><i class="fa-solid fa-industry icons"></i>Field Visit</a></li>
-                            <li id="menu-item-191" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-191"><a href="https://lmpixels.com/wp/leven-wp/full-width/contact/" data-hover="1"><i class="fa-solid fa-users icons"></i>Collaboration</a></li>
+                            <li id="menu-item-191" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-191"><a href="{% url 'home' %}" data-hover="1" class="{% if consultancy %}current{% else %}past{% endif %}"><i class="fa-solid fa-handshake icons"></i>Consultancy</a></li>
+                            <li id="menu-item-191" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-191"><a href="{% url 'students' %}" data-hover="1" class="{% if students %}current{% else %}past{% endif %}"><i class="fa-solid fa-user-graduate icons"></i>Students</a></li>
+                            <li id="menu-item-191" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-191"><a href="{% url 'home' %}" data-hover="1" class="{% if fvisits %}current{% else %}past{% endif %}"><i class="fa-solid fa-industry icons"></i>Field Visit</a></li>
+                            <li id="menu-item-191" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-191"><a href="{% url 'home' %}" data-hover="1" class="{% if collaboration %}current{% else %}past{% endif %}"><i class="fa-solid fa-users icons"></i>Collaboration</a></li>
                             
-                            <li id="menu-item-334" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-334"><a target="_blank" rel="noopener" href="https://themeforest.net/item/leven-vcard-wordpress-theme/25289671" data-hover="1">Others</a></li>
+                            <li id="menu-item-334" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-334"><a target="_blank" rel="noopener" href="{% url 'home' %}" data-hover="1" class="{% if others %}current{% else %}past{% endif %}">Others</a></li>
                         </ul>
                     </div>
 
