@@ -1,4 +1,202 @@
 {% extends 'base.html' %}
 {% block content %}
+{% load static %}
+<style>
+  @import url("https://fonts.googleapis.com/css?family=Roboto:400,400i,700");
 
+  body {
+    font-family: Roboto, sans-serif;
+    margin: 0;
+    height: 100vh;
+    background-image: linear-gradient(to top, #96fbc4 0%, #f9f586 100%);
+  }
+
+  .card {
+    background: #fff;
+    border-radius: 4px;
+    box-shadow: 0px 14px 80px rgba(34, 35, 58, 0.5);
+    width: 350px;
+    height: 300px !important;
+    display: flex;
+    flex-direction: row;
+    border-radius: 25px;
+    position: relative;
+    padding-right: 0 !important;
+    margin: auto !important;
+  }
+
+  .card h2 {
+    margin: 0;
+    padding: 0 1rem;
+  }
+
+  .card .title {
+    padding: 1rem;
+    text-align: right;
+    color: green;
+    font-weight: bold;
+    font-size: 12px;
+  }
+
+  .card .desc {
+    padding: 0.5rem 1rem;
+    font-size: 12px;
+  }
+
+  .card .actions {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    align-items: center;
+    padding: 0.5rem 1rem;
+  }
+
+  .card svg {
+    width: 85px;
+    height: 85px;
+    margin: 0 auto;
+  }
+
+  .img-avatar {
+    width: 80px;
+    height: 80px;
+    position: absolute;
+    border-radius: 50%;
+    top: 9px;
+    left: 55px;
+  }
+
+  .card-text {
+    display: grid;
+    grid-template-columns: 0.1fr 2fr;
+  }
+
+  .title-total {
+    padding: 2.5em 1.5em 1.5em 1.5em;
+    height: 300px;
+  }
+
+  path {
+    fill: white;
+  }
+
+  .img-portada {
+    width: 100%;
+  }
+
+  .portada {
+    width: 100%;
+    height: 100%;
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+    background-image: linear-gradient(75deg, yellow, transparent) !important;
+    background-position: bottom center;
+    background-size: cover;
+  }
+
+  button {
+    border: none;
+    background: none;
+    font-size: 24px;
+    color: #8bc34a;
+    cursor: pointer;
+    transition: .5s;
+
+  }
+</style>
+<div id="main-content" class="container">
+  <div class="row">
+
+
+    <div class=" col-xs-12 col-sm-12 ">
+      <div id="col_inner_c2094ed9c996102f2ef70b6125c4fbf5" class="fw-col-inner" data-paddings="0px 0px 0px 0px">
+
+        <div class="fw-divider-space" style="padding-top: 50px;"></div>
+
+        <div class="block-title">
+          <h2 style="font-size: 35px;">Students</h2>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="row students" style="display:grid !important ;grid-template-columns: repeat(3,1fr);column-gap:15px;row-gap:15px">
+    <div class="card">
+      <div class="img-avatar" style="text-align: center;">
+        <img src="{% static 'images/iitkgp.png' %}" alt="" style="width: 70px;height:70px;border-radius:40px;z-index:2">
+      </div>
+      <div class="card-text">
+        <div class="portada">
+
+        </div>
+        <div class="title-total">
+          <div class="title">Ant Collector</div>
+          <h2>Morgan Sweeney</h2>
+
+          <div class="desc">Morgan has collected ants since they were six years old and now has many dozen ants but none
+            in their pants.</div>
+          <div class="actions">
+            <button><i class="far fa-heart"></i></button>
+            <button><i class="far fa-envelope"></i></button>
+            <button><i class="fas fa-user-friends"></i></button>
+          </div>
+        </div>
+
+      </div>
+
+
+
+    </div>
+    <div class="card">
+      <div class="img-avatar" style="text-align: center;">
+        <img src="{% static 'images/iitkgp.png' %}" alt="" style="width: 70px;height:70px;border-radius:40px;z-index:2">
+      </div>
+      <div class="card-text">
+        <div class="portada">
+
+        </div>
+        <div class="title-total">
+          <div class="title">Ant Collector</div>
+          <h2>Morgan Sweeney</h2>
+
+          <div class="desc">Morgan has collected ants since they were six years old and now has many dozen ants but none
+            in their pants.</div>
+          <div class="actions">
+            <button><i class="far fa-heart"></i></button>
+            <button><i class="far fa-envelope"></i></button>
+            <button><i class="fas fa-user-friends"></i></button>
+          </div>
+        </div>
+
+      </div>
+
+
+
+    </div>
+    <div class="card">
+      <div class="img-avatar" style="text-align: center;">
+        <img src="{% static 'images/iitkgp.png' %}" alt="" style="width: 70px;height:70px;border-radius:40px;z-index:2">
+      </div>
+      <div class="card-text">
+        <div class="portada">
+
+        </div>
+        <div class="title-total">
+          <div class="title">Ant Collector</div>
+          <h2>Morgan Sweeney</h2>
+
+          <div class="desc">Morgan has collected ants since they were six years old and now has many dozen ants but none
+            in their pants.</div>
+          <div class="actions">
+            <button><i class="far fa-heart"></i></button>
+            <button><i class="far fa-envelope"></i></button>
+            <button><i class="fas fa-user-friends"></i></button>
+          </div>
+        </div>
+
+      </div>
+
+
+
+    </div>
+  </div>
+</div>
 {% endblock %}
